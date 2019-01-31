@@ -115,7 +115,7 @@
     "presets": [
       "react-app"
     ],
-    "plugins":[
+    "plugins": [
       [
         "import",
         {
@@ -123,7 +123,6 @@
           "style": "css"
         }
       ]
-
     ]
   }
 }
