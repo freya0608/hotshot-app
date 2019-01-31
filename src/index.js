@@ -1,6 +1,6 @@
-import  {createStore} from 'redux';
-
-
+import  {createStore,applyMiddleware} from 'redux';
+import thunk from 'redux-thunk'
+import {Provider} from 'react-redux'
 function counter(state = 0, action) {
     switch (action.type) {
         case 'jia':
@@ -12,7 +12,8 @@ function counter(state = 0, action) {
     }
 }
 
-const store = createStore(counter);
+const store = createStore(counter,applyMiddleware(thunk));
+
 
 const init  = store.getState();
 console.log(init);
